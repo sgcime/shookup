@@ -16,7 +16,7 @@ function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
-              소개
+              회사 소개
             </a>
             <a href="#features" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
               서비스 소개
