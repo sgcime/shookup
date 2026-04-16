@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import PromisesSection from "@/components/PromisesSection";
-import ServicesSection from "@/components/ServicesSection";
-import Footer from "@/components/Footer";
+import Header from "@/components/projectHeader";
+import HeroSection from "@/components/projectHeroSection";
+import PromisesSection from "@/components/projectPromisesSection";
+import ServicesSection from "@/components/projectServicesSection";
+import Footer from "@/components/projectFooter";
 
 export default function Home() {
   return (

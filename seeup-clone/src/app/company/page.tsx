@@ -1,12 +1,12 @@
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import IconsRow from "@/components/IconsRow";
-import CompanyOverview from "@/components/CompanyOverview";
-import MissionSection from "@/components/MissionSection";
-import VisionSection from "@/components/VisionSection";
-import CoreValues from "@/components/CoreValues";
-import CallToAction from "@/components/CallToAction";
-import Footer from "@/components/Footer";
+import Header from "@/components/companyHeader";
+import HeroSection from "@/components/companyHeroSection";
+import IconsRow from "@/components/companyIconsRow";
+import CompanyOverview from "@/components/companyCompanyOverview";
+import MissionSection from "@/components/companyMissionSection";
+import VisionSection from "@/components/companyVisionSection";
+import CoreValues from "@/components/companyCoreValues";
+import CallToAction from "@/components/companyCallToAction";
+import Footer from "@/components/companyFooter";
 
 export default function Home() {
   return (
