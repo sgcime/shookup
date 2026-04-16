@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 3% 24%;
+    --card: 0 0% 100%;
+    --card-foreground: 150 3% 24%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 3% 24%;
+    --primary: 176 85% 39%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 150 3% 24%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 150 2% 55%;
+    --accent: 176 85% 39%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 176 85% 39%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 150 3% 24%;
+    --foreground: 0 0% 96%;
+    --card: 150 3% 20%;
+    --card-foreground: 0 0% 96%;
+    --popover: 150 3% 20%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 176 85% 39%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 3% 30%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 150 3% 30%;
+    --muted-foreground: 150 2% 65%;
+    --accent: 176 85% 39%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 3% 30%;
+    --input: 150 3% 30%;
+    --ring: 176 85% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
