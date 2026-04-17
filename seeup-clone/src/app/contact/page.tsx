@@ -1,17 +1,17 @@
-import Header from "@/components/contactHeader";
+import Navigation from "@/components/contactNavigation";
 import HeroSection from "@/components/contactHeroSection";
-import PromisesSection from "@/components/contactPromisesSection";
-import ServicesSection from "@/components/contactServicesSection";
+import FormSection from "@/components/contactFormSection";
 import Footer from "@/components/contactFooter";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      <HeroSection />
-      <PromisesSection />
-      <ServicesSection />
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-1">
+        <HeroSection />
+        <FormSection />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }
