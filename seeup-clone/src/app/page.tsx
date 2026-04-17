@@ -372,13 +372,13 @@ function Footer() {
             </div>
           </div>
 
-          {/* Links
+          {/* Links */}
           <div className="text-sm space-y-2">
             <a href="#" className="text-[#8a8e8d] hover:text-[#3b3e3d] block underline">
               이용약관
             </a>
             <a href="#" className="text-[#8a8e8d] hover:text-[#3b3e3d] block underline">
-              개인정보취급방침 */}
+              개인정보취급방침
             </a>
           </div>
         </div>
