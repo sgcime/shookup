@@ -10,18 +10,18 @@ function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-[#0fb4b6]">SEEUP</span>
+            <span><img src="https://seeup.co.kr/assets/images/img/img_logo_l.png" alt="SEEUP Logo" className="h-10" /></span>
           </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
+            <a href="/company" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
               회사 소개
             </a>
-            <a href="#features" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
+            <a href="/project" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
               서비스 소개
             </a>
-            <a href="#testimonials" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
+            <a href="/contact" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
               협력사 가입문의
             </a>
             <a
@@ -64,7 +64,7 @@ function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-right">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-            <span className="text-[#0fb4b6]">정산</span>을 보다
+            <span className="text-[#0fb4b6]">정산</span>을 넘어
           </h1>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
             배달 산업의 수익 구조를 한눈에
@@ -73,13 +73,13 @@ function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-end mt-8">
             <a
-              href="#contact"
+              href="https://pf.kakao.com/_YQXyn"
               className="inline-block bg-white/20 backdrop-blur-sm text-white border border-white/50 px-8 py-3 text-base font-medium hover:bg-white/30 transition-colors"
             >
-              소개 보기
+              카카오채널 문의하기
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-block bg-[#0fb4b6] text-white px-8 py-3 text-base font-medium hover:bg-[#0da0a2] transition-colors"
             >
               협력사 문의하기
@@ -193,6 +193,7 @@ function FeaturesSection() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-8 flex-wrap">
             <span className="text-2xl md:text-3xl font-bold text-[#0fb4b6]">씨업은</span>
+            <span className="text-2xl md:text-3xl font-bold text-[#0fb4b6]">정확히</span>
             <span className="text-2xl md:text-3xl font-bold text-[#0fb4b6]">보입니다!</span>
           </div>
         </div>
@@ -224,7 +225,7 @@ function FeaturesSection() {
         {/* CTA Button */}
         <div className="text-center">
           <a
-            href="#"
+            href="/project"
             className="inline-block bg-[#0fb4b6] text-white px-8 py-3 text-base font-medium hover:bg-[#0da0a2] transition-colors"
           >
             SEEUP 서비스 소개 바로가기
@@ -242,15 +243,15 @@ function TestimonialsSection() {
   const testimonials = [
     {
       company: "A 협력사",
-      content: "정산 단계가 많이 줄어서 많이 편해졌습니다. 훨씬 편해졌죠. 운영에 더 집중할 수 있어졌어요.",
+      content: "정산 단계가 줄어드니까 훨씬 편해졌습니다.",
     },
     {
       company: "B 협력사",
-      content: "확실하게 포스앱대로 운영했는데 신경 쓸 게 많이 줄었어요. 운영이 편해졌습니다.",
+      content: "전에는 이것저것 확인할 게 많았는데 지금은 신경 쓸 게 많이 줄어 운영에 더 집중할 수 있어서 좋아요.",
     },
     {
       company: "C 협력사",
-      content: "전에 뭘 해야 할지 몰랐는데 씨업으로 많이 정리되었고 느낌입니다.",
+      content: "전에는 그냥 감으로 운영했는데 지금은 뭘 해야할지 기준이 생긴 느낌입니다.",
     },
   ];
 
@@ -302,7 +303,7 @@ function TestimonialsSection() {
         {/* CTA Button */}
         <div className="text-center mt-8">
           <a
-            href="#contact"
+            href="/contact"
             className="inline-block bg-white/20 backdrop-blur-sm text-white border border-white/50 px-8 py-3 text-base font-medium hover:bg-white/30 transition-colors"
           >
             협력사 문의하기
@@ -355,7 +356,7 @@ function Footer() {
           {/* Company Info */}
           <div className="text-sm text-[#8a8e8d] space-y-1">
             <p>
-              <span className="font-medium">상호</span> : 주식회사 숙업 |{" "}
+              <span className="font-medium">상호</span> : 주식회사 슉업 |{" "}
               <span className="font-medium">대표자</span> : 정규열
             </p>
             <p>
@@ -366,18 +367,18 @@ function Footer() {
               <span className="font-medium">주소</span> : 서울특별시 구로구 디지털로 31길 12, 2층 49호 (구로동, 넥스트데이)
             </p>
             <div className="pt-4">
-              <p>&copy; 2026 주식회사 숙업</p>
+              <p>&copy; 2026 주식회사 슉업</p>
               <p>Copyright &copy; 2026, All Rights Reserved - See Up</p>
             </div>
           </div>
 
-          {/* Links */}
+          {/* Links
           <div className="text-sm space-y-2">
             <a href="#" className="text-[#8a8e8d] hover:text-[#3b3e3d] block underline">
               이용약관
             </a>
             <a href="#" className="text-[#8a8e8d] hover:text-[#3b3e3d] block underline">
-              개인정보취급방침
+              개인정보취급방침 */}
             </a>
           </div>
         </div>
