@@ -3,7 +3,7 @@ export default function HeroSection() {
     <section className="relative h-[280px] md:h-[320px] overflow-hidden">
       {/* Background Image */}
       <img
-        src="/images/hero-bg.jpeg"
+        src="https://static.wixstatic.com/media/11062b_753f0a79645943a49b74cb1823629ff1~mv2.jpg/v1/fill/w_1350,h_314,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_753f0a79645943a49b74cb1823629ff1~mv2.jpg"
         alt="협력사 가입 배경"
         className="absolute inset-0 w-full h-full object-cover"
       />

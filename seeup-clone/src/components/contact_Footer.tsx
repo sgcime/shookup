@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -9,10 +10,13 @@ export default function Footer() {
           <div className="space-y-2 text-sm text-[#2c2e2f]">
             {/* Logo */}
             <div className="mb-4 flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#14b2b2] rounded flex items-center justify-center">
-                <span className="text-white font-bold text-sm">S</span>
-              </div>
-              <span className="text-xl font-bold text-[#2c2e2f]">씨업</span>
+              <Image
+                src="https://ext.same-assets.com/3728083243/3084130489.png"
+                alt="SeeUp Logo"
+                width={100}
+                height={33}
+                className="h-8 w-auto"
+              />
             </div>
 
             <p>
