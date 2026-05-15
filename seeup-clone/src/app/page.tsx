@@ -368,7 +368,7 @@ function Footer() {
             </p>
             <div className="pt-4">
               <p>&copy; 2026 주식회사 슉업</p>
-              <p>Copyright &copy; 2026, All Rights Reserved - See Up</p>
+              <p>Copyright &copy; 2026, All Rights Reserved - SeeUp</p>
             </div>
           </div>
 

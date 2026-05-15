@@ -7,10 +7,7 @@ export default function HeroSection() {
             정산을 넘어
           </span>
           <span className="block animate-fade-in-up opacity-0 animate-delay-2">
-            운영을 바꾸
-          </span>
-          <span className="block animate-fade-in-up opacity-0 animate-delay-3">
-            다.
+            운영을 바꾸다.
           </span>
         </h1>
       </div>

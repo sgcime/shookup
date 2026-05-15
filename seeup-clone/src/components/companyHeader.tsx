@@ -31,13 +31,13 @@ export default function Header() {
               회사 소개
             </Link>
             <Link
-              href="#"
+              href="/project"
               className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#40b0b8] transition-colors rounded-md hover:bg-gray-50"
             >
               서비스 소개
             </Link>
             <Link
-              href="#"
+              href="/contact"
               className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#40b0b8] transition-colors rounded-md hover:bg-gray-50"
             >
               협력사 가입문의
@@ -94,13 +94,13 @@ export default function Header() {
                 회사 소개
               </Link>
               <Link
-                href="#"
+                href="/project"
                 className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#40b0b8] hover:bg-gray-50 rounded-md"
               >
                 서비스 소개
               </Link>
               <Link
-                href="#"
+                href="/contact"
                 className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#40b0b8] hover:bg-gray-50 rounded-md"
               >
                 협력사 가입문의

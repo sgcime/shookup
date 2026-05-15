@@ -7,9 +7,9 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "회사 소개", href: "#" },
-    { name: "서비스 소개", href: "#", active: true },
-    { name: "협력사 가입문의", href: "#" },
+    { name: "회사 소개", href: "/company" },
+    { name: "서비스 소개", href: "/project", active: true },
+    { name: "협력사 가입문의", href: "/contact" },
   ];
 
   return (
@@ -17,11 +17,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 flex items-center gap-2">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-[#14b2b2] rounded flex items-center justify-center">
-              <span className="text-white font-bold text-sm md:text-base">S</span>
-            </div>
-            <span className="text-xl md:text-2xl font-bold text-[#2c2e2f]">씨업</span>
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="https://ext.same-assets.com/3728083243/3084130489.png"
+              alt="SeeUp Logo"
+              width={120}
+              height={40}
+              className="h-8 md:h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

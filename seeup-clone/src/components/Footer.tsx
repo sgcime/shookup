@@ -17,14 +17,14 @@ export default function Footer() {
             />
 
             <div className="space-y-2 text-sm text-gray-600">
-              <p>상호 : 주식회사 숲업 | 대표자 : 정규열</p>
-              <p>사업자 등록번호 : 689-88-03394 | 대표번호 : 02-858-5226</p>
+              <p>상호 : 주식회사 슉업 | 대표자 : 정규열</p>
+              <p>사업자등록번호 : 689-88-03394 | 대표번호 : 02-858-5226</p>
               <p>주소 : 서울특별시 구로구 디지털로 31길 12, 2층 49호 (구로동, 넥스트데이)</p>
             </div>
 
             <div className="mt-6 text-sm text-gray-500">
-              <p>&copy; 2026 주식회사 숲업</p>
-              <p>Copyright &copy; 2026, All Rights Reserved - See Up</p>
+              <p>&copy; 2026 주식회사 슉업</p>
+              <p>Copyright &copy; 2026, All Rights Reserved - SeeUp</p>
             </div>
           </div>
 
