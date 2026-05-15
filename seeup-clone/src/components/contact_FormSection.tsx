@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 declare global {
   interface Window {
@@ -11,38 +11,45 @@ declare global {
 }
 
 export default function FormSection() {
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
-    // Tally embed script 로직 (기존 로직 유지 및 보완)
-    const d = document;
-    const w = "https://tally.so/widgets/embed.js";
-    
-    const v = function () {
-      if (typeof window.Tally !== "undefined") {
+    setIsMounted(true);
+
+    const scriptSrc = "https://tally.so/widgets/embed.js";
+
+    const loadTally = () => {
+      if (window.Tally) {
         window.Tally.loadEmbeds();
       } else {
-        d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(
-          (e: Element) => {
-            const iframe = e as HTMLIFrameElement;
-            if (iframe.dataset.tallySrc) {
-              iframe.src = iframe.dataset.tallySrc;
-            }
+        const iframes = document.querySelectorAll("iframe[data-tally-src]");
+        iframes.forEach((e) => {
+          const iframe = e as HTMLIFrameElement;
+          if (iframe.dataset.tallySrc && !iframe.src) {
+            iframe.src = iframe.dataset.tallySrc;
           }
-        );
+        });
       }
     };
 
-    if (typeof window.Tally !== "undefined") {
-      v();
-    } else if (d.querySelector('script[src="' + w + '"]') == null) {
-      const s = d.createElement("script");
-      s.src = w;
-      s.onload = v;
-      s.onerror = v;
-      d.body.appendChild(s);
+    let script = document.querySelector(`script[src="${scriptSrc}"]`) as HTMLScriptElement;
+
+    if (!script) {
+      script = document.createElement("script");
+      script.src = scriptSrc;
+      script.async = true;
+      script.onload = loadTally;
+      script.onerror = loadTally;
+      document.body.appendChild(script);
     } else {
-      // 이미 스크립트가 로드되어 있는 경우에도 초기화 실행
-      v();
+      loadTally();
     }
+
+    const timer = setTimeout(() => {
+      loadTally();
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -61,18 +68,17 @@ export default function FormSection() {
           </div>
 
           {/* Tally Form Embed 영역 */}
-          <div className="min-h-[500px] w-full">
-            {/* ⚠️ 중요: 여기에 실제 Tally 폼 ID를 입력해야 합니다 */}
-            <iframe
-              data-tally-src="https://tally.so/embed/w71899?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              loading="lazy"
-              width="100%"
-              height="500"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              title="협력사 가입 문의하기"
-            ></iframe>
+          <div className="min-h-[600px] w-full overflow-hidden relative">
+            {isMounted && (
+              <iframe
+                data-tally-src="https://tally.so/embed/Y5zWP0?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy"
+                width="100%"
+                height="600"
+                style={{ border: "none", margin: 0 }}
+                title="협력사 가입 문의하기"
+              ></iframe>
+            )}
           </div>
         </div>
       </div>
