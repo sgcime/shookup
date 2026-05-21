@@ -16,7 +16,7 @@ export default function ServicesSection() {
       borderColor: "border-l-4 border-[#e8a54b]",
     },
     {
-      title: "항목별 분리 표시,
+      title: "항목별 분리 표시",
       description: "[ 라이더 지급액 / 프로모션비 / PG수수료 ]를 한눈에",
       borderColor: "border-l-4 border-[#e8a54b]",
     },
