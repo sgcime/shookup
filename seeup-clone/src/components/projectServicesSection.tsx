@@ -3,7 +3,7 @@ export default function ServicesSection() {
     {
       title: "세무 자료 연동",
       description: "카드 매입자료/증빙 자동 생성",
-      borderColor: "",
+      borderColor: "border-l-4 border-[#e8a54b]",
     },
     {
       title: "실시간 순수익 확인",
@@ -13,7 +13,22 @@ export default function ServicesSection() {
     {
       title: "수익 자동집계",
       description: "매출 데이터를 자동으로 수집/계산 가능합니다.",
-      borderColor: "border-l-4 border-[#d97d4a]",
+      borderColor: "border-l-4 border-[#e8a54b]",
+    },
+    {
+      title: "항목별 분리 표시,
+      description: "[ 라이더 지급액 / 프로모션비 / PG수수료 ]를 한눈에",
+      borderColor: "border-l-4 border-[#e8a54b]",
+    },
+    {
+      title: "정산 자동화",
+      description: "일정산 / 주정산 선택 라이더 별 자동 처리",
+      borderColor: "border-l-4 border-[#e8a54b]",
+    },
+    {
+      title: "프로모션 선정산",
+      description: "건수별 / 금액별 프로모션 즉시 반영",
+      borderColor: "border-l-4 border-[#e8a54b]",
     },
   ];
 

@@ -2,8 +2,8 @@ export default function PromisesSection() {
   const promises = [
     {
       number: "1",
-      title: "상품을 그대로 반영합니다.",
-      description: "상품의 실제 정산 구조를 오차 없는 정산 환경을 제공합니다.",
+      title: "플랫폼 구조을 그대로 반영",
+      description: "배달 플랫폼의 실제 정산 구조를 반영하여 오차 없는 정산 환경을 제공합니다.",
     },
     {
       number: "2",
@@ -17,8 +17,8 @@ export default function PromisesSection() {
     },
     {
       number: "4",
-      title: "효율적인 관리",
-      description: "복잡한 정산 자금 흐름 관리할 수 있습니다.",
+      title: "효율적인 정산 구조",
+      description: "복잡한 정산 과정을 단순화하고 자금 흐름을 안정적으로 관리할 수 있도록 지원합니다.",
     },
   ];
 

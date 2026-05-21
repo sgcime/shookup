@@ -181,20 +181,18 @@ function FeaturesSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3b3e3d] mb-2">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#3b3e3d] mb-2">
             배달 대행 수익,
-          </h2>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3b3e3d]">
+          </h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#3b3e3d]">
             정확히 보이시나요?
-          </h2>
+          </h1>
         </div>
 
         {/* Subtitle */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-8 flex-wrap">
-            <span className="text-2xl md:text-3xl font-bold text-[#0fb4b6]">씨업은</span>
-            <span className="text-2xl md:text-3xl font-bold text-[#0fb4b6]">정확히</span>
-            <span className="text-2xl md:text-3xl font-bold text-[#0fb4b6]">보입니다!</span>
+            <span className="text-2xl md:text-3xl font-bold text-[#0fb4b6]">씨업은 정확히 보입니다!</span>
           </div>
         </div>
 
@@ -205,7 +203,7 @@ function FeaturesSection() {
               <div className="w-20 h-20 mb-4 flex items-center justify-center transition-transform group-hover:scale-110">
                 {feature.icon}
               </div>
-              <p className="text-sm text-[#3b3e3d] font-medium">{feature.label}</p>
+              <p className="text-sm text-[#3b3e3d] font-Large">{feature.label}</p>
             </div>
           ))}
         </div>
@@ -217,7 +215,7 @@ function FeaturesSection() {
               <div className="w-20 h-20 mb-4 flex items-center justify-center transition-transform group-hover:scale-110">
                 {feature.icon}
               </div>
-              <p className="text-sm text-[#3b3e3d] font-medium">{feature.label}</p>
+              <p className="text-sm text-[#3b3e3d] font-Large">{feature.label}</p>
             </div>
           ))}
         </div>

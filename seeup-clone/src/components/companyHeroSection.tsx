@@ -6,6 +6,12 @@ export default function HeroSection() {
           <span className="block animate-fade-in-up opacity-0 animate-delay-1">
             정산을 넘어
           </span>
+          <span className="block animate-fade-in-up opacity-0 animate-delay-1"></span>
+        </h1>
+        <h3 className="mt-6 text-lg sm:text-xl md:text-2xl text-gray-600 animate-fade-in-up opacity-0 animate-delay-3">
+          <br></br>
+        </h3>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-[#333c46] leading-tight tracking-tight">
           <span className="block animate-fade-in-up opacity-0 animate-delay-2">
             운영을 바꾸다.
           </span>
