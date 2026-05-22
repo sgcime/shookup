@@ -304,8 +304,8 @@ function TestimonialsSection() {
           </a>
         </div>
 
-      </div> {/* z-10 max-w-6xl div 닫기 */}
-    </section> {/* section 닫기 */}
+      </div>
+    </section>
   );
 }
 // CTA Section
