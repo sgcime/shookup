@@ -98,8 +98,9 @@ function HeroSection() {
 function FeaturesSection() {
   const features = [
     {
+      // w-16 h-16에서 w-24 h-24로 확대
       icon: (
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-24 h-24">
           <circle cx="32" cy="32" r="28" stroke="#0fb4b6" strokeWidth="2" fill="none"/>
           <circle cx="32" cy="32" r="20" stroke="#0fb4b6" strokeWidth="2" fill="none"/>
           <text x="32" y="38" textAnchor="middle" fill="#0fb4b6" fontSize="20" fontWeight="bold">$</text>
@@ -109,7 +110,7 @@ function FeaturesSection() {
     },
     {
       icon: (
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-24 h-24">
           <rect x="8" y="44" width="10" height="12" fill="#0fb4b6" opacity="0.5"/>
           <rect x="22" y="32" width="10" height="24" fill="#0fb4b6" opacity="0.7"/>
           <rect x="36" y="20" width="10" height="36" fill="#0fb4b6"/>
@@ -121,7 +122,7 @@ function FeaturesSection() {
     },
     {
       icon: (
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-24 h-24">
           <circle cx="32" cy="32" r="24" stroke="#0fb4b6" strokeWidth="2" fill="none"/>
           <circle cx="32" cy="32" r="4" fill="#0fb4b6"/>
           <path d="M32 32L44 20" stroke="#0fb4b6" strokeWidth="2"/>
@@ -134,7 +135,7 @@ function FeaturesSection() {
     },
     {
       icon: (
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-24 h-24">
           <rect x="12" y="8" width="32" height="48" rx="2" stroke="#0fb4b6" strokeWidth="2" fill="none"/>
           <path d="M12 16H44" stroke="#0fb4b6" strokeWidth="2"/>
           <path d="M18 24H38" stroke="#0fb4b6" strokeWidth="1.5"/>
@@ -147,7 +148,7 @@ function FeaturesSection() {
     },
     {
       icon: (
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-24 h-24">
           <rect x="16" y="24" width="32" height="28" stroke="#0fb4b6" strokeWidth="2" fill="none"/>
           <path d="M16 32H48" stroke="#0fb4b6" strokeWidth="2"/>
           <path d="M24 8V24" stroke="#0fb4b6" strokeWidth="2"/>
@@ -161,7 +162,7 @@ function FeaturesSection() {
     },
     {
       icon: (
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-24 h-24">
           <rect x="8" y="12" width="40" height="44" rx="2" stroke="#0fb4b6" strokeWidth="2" fill="none"/>
           <path d="M8 20H48" stroke="#0fb4b6" strokeWidth="2"/>
           <path d="M14 28H42" stroke="#0fb4b6" strokeWidth="1.5"/>
@@ -190,32 +191,36 @@ function FeaturesSection() {
         </div>
 
         {/* Subtitle */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-8 flex-wrap">
             <span className="text-2xl md:text-3xl font-bold text-[#0fb4b6]">씨업은 정확히 보입니다!</span>
           </div>
         </div>
 
         {/* Features Grid - First Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {features.slice(0, 3).map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 mb-4 flex items-center justify-center transition-transform group-hover:scale-110">
+              {/* w-20 h-20 -> w-28 h-28로 그리드 안의 아이콘 영역 확대 */}
+              <div className="w-28 h-28 mb-4 flex items-center justify-center transition-transform group-hover:scale-110">
                 {feature.icon}
               </div>
-              <p className="text-sm text-[#3b3e3d] font-Large">{feature.label}</p>
+              {/* text-sm -> text-lg font-bold로 라벨 텍스트 변경 */}
+              <p className="text-lg text-[#3b3e3d] font-bold tracking-tight">{feature.label}</p>
             </div>
           ))}
         </div>
 
         {/* Features Grid - Second Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {features.slice(3, 6).map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 mb-4 flex items-center justify-center transition-transform group-hover:scale-110">
+              {/* w-20 h-20 -> w-28 h-28로 그리드 안의 아이콘 영역 확대 */}
+              <div className="w-28 h-28 mb-4 flex items-center justify-center transition-transform group-hover:scale-110">
                 {feature.icon}
               </div>
-              <p className="text-sm text-[#3b3e3d] font-Large">{feature.label}</p>
+              {/* text-sm -> text-lg font-bold로 라벨 텍스트 변경 */}
+              <p className="text-lg text-[#3b3e3d] font-bold tracking-tight">{feature.label}</p>
             </div>
           ))}
         </div>
@@ -224,7 +229,7 @@ function FeaturesSection() {
         <div className="text-center">
           <a
             href="/project"
-            className="inline-block bg-[#0fb4b6] text-white px-8 py-3 text-base font-medium hover:bg-[#0da0a2] transition-colors"
+            className="inline-block bg-[#0fb4b6] text-white px-8 py-3 text-base font-medium hover:bg-[#0da0a2] transition-colors rounded"
           >
             SEEUP 서비스 소개 바로가기
           </a>
@@ -236,67 +241,70 @@ function FeaturesSection() {
 
 // Testimonials Section
 function TestimonialsSection() {
-  const [activeTab, setActiveTab] = useState(0);
-
   const testimonials = [
     {
       company: "A 협력사",
-      content: "정산 단계가 줄어드니까 훨씬 편해졌습니다.",
+      content: "정산 단계가 줄어드니까\n훨씬 편해졌습니다.",
     },
     {
       company: "B 협력사",
-      content: "전에는 이것저것 확인할 게 많았는데 지금은 신경 쓸 게 많이 줄어 운영에 더 집중할 수 있어서 좋아요.",
+      content: "전에는 이것저것 확인할 게 많았는데\n지금은 신경 쓸 게 많이 줄어\n운영에 더 집중할 수 있어서 좋아요.",
     },
     {
       company: "C 협력사",
-      content: "전에는 그냥 감으로 운영했는데 지금은 뭘 해야할지 기준이 생긴 느낌입니다.",
+      content: "전에는 그냥 감으로 운영했는데\n지금은 뭘 해야 할지\n기준이 생긴 느낌입니다.",
     },
   ];
 
   return (
     <section
       id="testimonials"
-      className="relative py-20 bg-cover bg-center bg-no-repeat"
+      className="relative py-24 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=1600&q=80')`,
+        // 사진 속 채소/식재료 봉투 느낌의 Unsplash 배경 이미지로 매칭했습니다.
+        backgroundImage: `url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80')`,
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      {/* 어두운 반투명 오버레이로 글씨 가독성 확보 */}
+      <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         {/* Section Title */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-16 tracking-wide">
           협력사들이 말하는 씨업 사용 후기
         </h2>
 
-        {/* Testimonial Card */}
-        <div className="bg-white/10 backdrop-blur-md rounded-lg overflow-hidden">
-          {/* Tabs */}
-          <div className="flex border-b border-white/20">
-            {testimonials.map((testimonial, index) => (
-              <button
-                key={index}
-                type="button"
-                onClick={() => setActiveTab(index)}
-                className={`flex-1 py-4 text-sm font-medium transition-colors ${
-                  activeTab === index
-                    ? "bg-white/20 text-white"
-                    : "text-white/70 hover:text-white hover:bg-white/10"
-                }`}
-              >
+        {/* 3열 카드 그리드 레이아웃 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-12">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-md rounded-md border border-white/10 p-8 flex flex-col items-center justify-start min-h-[250px] text-center"
+            >
+              {/* 카드 상단 협력사 이름 */}
+              <h3 className="text-white font-bold text-lg mb-6">
                 {testimonial.company}
-              </button>
-            ))}
-          </div>
-
-          {/* Content */}
-          <div className="p-8">
-            <p className="text-white text-center text-lg leading-relaxed">
-              {testimonials[activeTab].content}
-            </p>
-          </div>
+              </h3>
+              
+              {/* 후기 본문 (\n을 행바꿈으로 인식하도록 white-space-pre-line 적용) */}
+              <p className="text-white/90 text-sm md:text-base leading-relaxed whitespace-pre-line">
+                {testimonial.content}
+              </p>
+            </div>
+          ))}
         </div>
+
+        {/* 하단 협력사 문의하기 버튼 */}
+        <button
+          type="button"
+          className="bg-white/70 hover:bg-white text-[#333333] font-medium text-sm px-8 py-3 rounded shadow-md transition-all duration-200 mt-4"
+        >
+          협력사 문의하기
+        </button>
+      </div>
+    </section>
+  );
+}
 
         {/* CTA Button */}
         <div className="text-center mt-8">
