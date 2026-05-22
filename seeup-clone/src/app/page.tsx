@@ -294,32 +294,20 @@ function TestimonialsSection() {
           ))}
         </div>
 
-        {/* 하단 협력사 문의하기 버튼 */}
-        <button
-          type="button"
-          className="bg-white/70 hover:bg-white text-[#333333] font-medium text-sm px-8 py-3 rounded shadow-md transition-all duration-200 mt-4"
-        >
-          협력사 문의하기
-        </button>
-      </div>
-    </section>
-  );
-}
-
-        {/* CTA Button */}
+{/* 하단 협력사 문의하기 버튼 (정리된 최종본) */}
         <div className="text-center mt-8">
           <a
             href="/contact"
-            className="inline-block bg-white/20 backdrop-blur-sm text-white border border-white/50 px-8 py-3 text-base font-medium hover:bg-white/30 transition-colors"
+            className="inline-block bg-white/70 hover:bg-white text-[#333333] font-medium text-sm px-8 py-3 rounded shadow-md transition-all duration-200"
           >
             협력사 문의하기
           </a>
         </div>
-      </div>
-    </section>
+
+      </div> {/* z-10 max-w-6xl div 닫기 */}
+    </section> {/* section 닫기 */}
   );
 }
-
 // CTA Section
 function CTASection() {
   return (
