@@ -64,3 +64,20 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ==========================================================================
+   하단 우측 외부 플로팅 상담/챗 버튼 강제 제거 (토스 라이브챗, 채널톡 대응)
+   ========================================================================== */
+#ch-plugin,
+#ch-plugin-root,
+.ch-plugin-script-inserted,
+[id*="ch-plugin"],
+iframe[id*="chat"],
+iframe[class*="chat"],
+div[class*="Livechat"],
+div[class*="FloatingButton"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

@@ -1,85 +1,95 @@
 import React from "react";
 
 export default function IconsRow() {
-  // 컴파일러 꼬임 방지 및 완벽한 민트색 라인 아트를 위해 고유 SVG 코드를 내장했습니다.
+  // 실제 첨부해주신 원본 이미지 속 아이콘의 고유 디테일을 고스란히 이식했습니다.
   const icons = [
     {
       alt: "배달 서비스",
       component: (
-        <svg viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-          {/* 오토바이 몸체 및 바퀴 */}
-          <circle cx="25" cy="55" r="7" />
-          <circle cx="65" cy="55" r="7" />
-          <path d="M25 55H45L55 35H35L25 55Z" />
-          <path d="M55 35L61 47" />
-          {/* 배달 박스 */}
-          <rect x="15" y="25" width="16" height="14" rx="2" />
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          <path d="M12 40H30V24H12V40Z" stroke="#0fb4b6" strokeWidth="3" strokeLinejoin="round" />
+          <path d="M16 40C16 52.5 24 58 35 58" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" />
+          <path d="M35 58H72M72 58L85 41V35H58" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="35" cy="74" r="9" stroke="#0fb4b6" strokeWidth="3" />
+          <circle cx="72" cy="74" r="9" stroke="#0fb4b6" strokeWidth="3" />
+          <path d="M54 35L48 24H32V35H54Z" stroke="#0fb4b6" strokeWidth="3" strokeLinejoin="round" />
         </svg>
       )
     },
     {
       alt: "팀 협업",
       component: (
-        <svg viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-          {/* 동전/코인 탑 누적 레이아웃 */}
-          <path d="M15 32C15 36 21 39 28 39C35 39 41 36 41 32M15 32V44C15 48 21 51 28 51C35 51 41 48 41 44V32M15 32C15 28 21 25 28 25C35 25 41 28 41 32" />
-          <path d="M39 42C39 46 45 49 52 49C59 49 65 46 65 42M39 42V54C39 58 45 61 52 61C59 61 65 58 65 54V42M39 42C39 38 45 35 52 35C59 35 65 38 65 42" />
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          {/* 가운데 높은 동전 탑 */}
+          <path d="M37 32C37 37 43 40 50 40C57 40 63 37 63 32M37 32V68C37 73 43 76 50 76C57 76 63 73 63 68V32M37 32C37 27 43 24 50 24C57 24 63 27 63 32" stroke="#0fb4b6" strokeWidth="3" strokeLinejoin="round" />
+          <path d="M37 41C37 46 43 49 50 49C57 49 63 46 63 41" stroke="#0fb4b6" strokeWidth="3" />
+          <path d="M37 50C37 55 43 58 50 58C57 58 63 55 63 50" stroke="#0fb4b6" strokeWidth="3" />
+          <path d="M37 59C37 64 43 67 50 67C57 67 63 64 63 59" stroke="#0fb4b6" strokeWidth="3" />
+          {/* 왼쪽 낮은 동전 탑 */}
+          <path d="M13 46C13 50 18 53 25 53C32 53 37 50 37 46M13 46V64C13 68 18 71 25 71C32 71 37 68 37 64V46M13 46C13 42 18 39 25 39C32 39 37 42 37 46" stroke="#0fb4b6" strokeWidth="3" strokeLinejoin="round" />
+          <path d="M13 55C13 59 18 62 25 62C32 62 37 59 37 55" stroke="#0fb4b6" strokeWidth="3" />
+          {/* 오른쪽 낮은 동전 탑 */}
+          <path d="M63 46C63 50 68 53 75 53C82 53 87 50 87 46M63 46V64C63 68 68 71 75 71C82 71 87 68 87 64V46M63 46C63 42 68 39 75 39C82 39 87 42 87 46" stroke="#0fb4b6" strokeWidth="3" strokeLinejoin="round" />
+          <path d="M63 55C63 59 68 62 75 62C82 62 87 59 87 55" stroke="#0fb4b6" strokeWidth="3" />
         </svg>
       )
     },
     {
       alt: "보안",
       component: (
-        <svg viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-          {/* 정면에서 본 클래식 스쿠터 라인 */}
-          <path d="M40 20C32 20 28 24 28 32V52C28 56 32 58 40 58C48 58 52 56 52 52V32C52 24 48 20 40 20Z" />
-          <circle cx="40" cy="20" r="3" />
-          <path d="M35 15H45" />
-          <rect x="37" y="58" width="6" height="10" rx="1" />
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          <rect x="40" y="32" width="20" height="42" rx="10" stroke="#0fb4b6" strokeWidth="3" />
+          <path d="M30 40H70" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" />
+          <circle cx="50" cy="27" r="4" stroke="#0fb4b6" strokeWidth="3" />
+          <path d="M22 64C22 64 34 52 40 52M78 64C78 64 66 52 60 52" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" />
+          <circle cx="50" cy="74" r="5" stroke="#0fb4b6" strokeWidth="3" />
         </svg>
       )
     },
     {
       alt: "금융 서비스",
       component: (
-        <svg viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-          {/* 달러 코인을 감싸는 두 손 */}
-          <circle cx="40" cy="30" r="11" />
-          <path d="M40 24V36M37 27H43M37 33H43" />
-          <path d="M22 36C22 45 32 58 40 58C48 58 58 45 58 36" />
-          <path d="M16 40V52H26" />
-          <path d="M64 40V52H54" />
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          <circle cx="50" cy="30" r="14" stroke="#0fb4b6" strokeWidth="3" />
+          <path d="M50 22V38M44 26H54M44 34H56" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" />
+          <path d="M24 44C24 44 20 62 38 68M76 44C76 44 80 62 62 68" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" />
+          <path d="M38 68C44 70 56 70 62 68" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" />
+          <path d="M18 52L26 68H36" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M82 52L74 68H64" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       )
     },
     {
       alt: "빠른 배송",
       component: (
-        <svg viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-          {/* 상자가 여러 개 레이어드된 배달 모빌리티 */}
-          <circle cx="65" cy="56" r="6" />
-          <circle cx="28" cy="56" r="6" />
-          <path d="M28 56H48L56 38H40L28 56Z" />
-          {/* 뒷단에 적재된 다단 물류 레이어 상자 선 */}
-          <path d="M16 26H34V46H16V26Z" />
-          <path d="M18 21H32M20 16H30" />
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          {/* 뒤쪽 피자박스 레이어 세트 */}
+          <path d="M12 20H48V42" stroke="#0fb4b6" strokeWidth="3" strokeLinejoin="round" />
+          <path d="M16 15H44" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" />
+          <path d="M20 10H40" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" />
+          {/* 전면 오토바이 실루엣 채우기&선 매칭 */}
+          <path d="M40 34H65L74 54V70H40V34Z" fill="#0fb4b6" />
+          <path d="M74 54L84 54L88 44" stroke="#0fb4b6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="48" cy="78" r="8" fill="#f8f9fa" stroke="#0fb4b6" strokeWidth="3" />
+          <circle cx="78" cy="78" r="8" fill="#f8f9fa" stroke="#0fb4b6" strokeWidth="3" />
         </svg>
       )
     },
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 bg-[#f8f9fa]">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-24">
+    <section className="py-16 md:py-24 px-6 bg-[#f8f9fa]">
+      <div className="max-w-7xl mx-auto">
+        {/* 한눈에 가득 차도록 간격(gap) 조정 및 가로 정렬 배치 강화 */}
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 lg:gap-28">
           {icons.map((icon, index) => (
             <div
               key={index}
               role="img"
               aria-label={icon.alt}
-              className="icon-hover flex items-center justify-center transition-all duration-300 hover:scale-110 rounded-full cursor-pointer p-4 w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
+              {/* 요구사항 반영: 크기를기존 w-24~32에서 w-28~40(최대 160px 대형 스케일)으로 대폭 키움 */}
+              className="flex items-center justify-center transition-all duration-300 hover:scale-112 cursor-pointer p-2 w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40"
             >
-              {/* 내장형 코드가 들어가 있어 외부 네트워크 통신 없이 초고속으로 깨끗하게 표현됩니다 */}
               {icon.component}
             </div>
           ))}
