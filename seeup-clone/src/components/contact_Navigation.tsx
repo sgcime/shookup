@@ -6,8 +6,8 @@ import { Menu, X } from "lucide-react";
 import Image from 'next/image';
 
 const navItems = [
-  { name: "소개", href: "#", active: false },
-  { name: "서비스 소개", href: "#", active: false },
+  { name: "회사 소개", href: "/company", active: false },
+  { name: "서비스 소개", href: "/project", active: false },
   { name: "협력사 가입문의", href: "#", active: true },
   { name: "SEEUP 라이더 바로가기", href: "https://www.seeup.co.kr/", active: false, external: true },
 ];
