@@ -25,20 +25,28 @@ const icons = [
 
 export default function IconsRow() {
   return (
-    <section className="py-8 md:py-12 px-4 bg-white">
-      <div className="max-w-5xl mx-auto">
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
+    <section className="py-12 md:py-20 px-4 bg-[#f8f9fa]">
+      <div className="max-w-6xl mx-auto">
+        {/* 가로 간격을 더 넓히고 모바일에서도 줄바꿈이 자연스럽도록 조절 */}
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-24">
           {icons.map((icon, index) => (
             <div
               key={index}
-              className="icon-hover flex items-center justify-center"
+              className="icon-hover flex items-center justify-center transition-transform duration-200 hover:scale-105"
             >
               <Image
                 src={icon.src}
                 alt={icon.alt}
-                width={80}
-                height={80}
-                className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                {/* 원본 해상도가 깨지지 않도록 width/height 기본값을 160으로 확장 */}
+                width={160}
+                height={160}
+                {/* 1. 크기 대폭 확대: 모바일 w-24, 태블릿 w-28, 데스크톱 w-32 
+                  2. CSS filter를 이용해 검은색/타색상 아이콘을 사진과 일치하는 민트색(#60d4dc) 톤으로 강제 변환
+                */}
+                className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain"
+                style={{
+                  filter: "invert(81%) sepia(21%) saturate(983%) corner-hue(135deg) hue-rotate(135deg) brightness(96%) contrast(89%)"
+                }}
               />
             </div>
           ))}
