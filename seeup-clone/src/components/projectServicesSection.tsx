@@ -3,101 +3,122 @@ export default function ServicesSection() {
     {
       title: "세무 자료 연동",
       description: "카드 매입자료/증빙 자동 생성",
-      borderColor: "border-l-4 border-[#e8a54b]",
     },
     {
       title: "실시간 순수익 확인",
       description: "대표님이 실제로 버는 금액을 실시간으로 확인 가능합니다.",
-      borderColor: "border-l-4 border-[#e8a54b]",
     },
     {
       title: "수익 자동집계",
       description: "매출 데이터를 자동으로 수집/계산 가능합니다.",
-      borderColor: "border-l-4 border-[#e8a54b]",
     },
     {
       title: "항목별 분리 표시",
-      description: "[ 라이더 지급액 / 프로모션비 / PG수수료 ]를 한눈에",
-      borderColor: "border-l-4 border-[#e8a54b]",
+      description: "[ 라이더 지급액 / 프로모션비 / PG 수수료 ]를 한눈에",
     },
     {
       title: "정산 자동화",
       description: "일정산 / 주정산 선택 라이더 별 자동 처리",
-      borderColor: "border-l-4 border-[#e8a54b]",
     },
     {
       title: "프로모션 선정산",
       description: "건수별 / 금액별 프로모션 즉시 반영",
-      borderColor: "border-l-4 border-[#e8a54b]",
     },
   ];
 
-  // Custom SVG icons
+  // 사진 속 깨끗한 민트색(#0fb4b6) 라인 아트 6종 완벽 매칭
   const icons = [
-    // Tax Data Integration - stacked layers icon
-    <svg key="tax" viewBox="0 0 80 80" fill="none" className="w-16 h-16">
-      <path d="M40 20L10 35V45L40 60L70 45V35L40 20Z" fill="#14b2b2" fillOpacity="0.3"/>
-      <path d="M40 10L10 25V35L40 50L70 35V25L40 10Z" fill="#14b2b2" fillOpacity="0.5"/>
-      <path d="M40 0L10 15V25L40 40L70 25V15L40 0Z" fill="#14b2b2"/>
+    // 1. 세무 자료 연동 (차곡차곡 쌓인 마름모 레이어)
+    <svg key="tax" viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20">
+      <path d="M40 12L15 24L40 36L65 24L40 12Z" />
+      <path d="M15 34L40 46L65 34" />
+      <path d="M15 44L40 56L65 44" />
+      <path d="M15 54L40 66L65 54" />
     </svg>,
-    // Real-time Profit - coins/stack icon
-    <svg key="profit" viewBox="0 0 80 80" fill="none" className="w-16 h-16">
-      <ellipse cx="40" cy="60" rx="25" ry="8" fill="#14b2b2" fillOpacity="0.3"/>
-      <ellipse cx="40" cy="50" rx="25" ry="8" fill="#14b2b2" fillOpacity="0.5"/>
-      <ellipse cx="40" cy="40" rx="25" ry="8" fill="#14b2b2" fillOpacity="0.7"/>
-      <ellipse cx="40" cy="30" rx="25" ry="8" fill="#14b2b2"/>
-      <ellipse cx="40" cy="20" rx="25" ry="8" fill="#e8a54b"/>
+    
+    // 2. 실시간 순수익 확인 (비대칭 동전 탑)
+    <svg key="profit" viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20">
+      <path d="M22 28C22 32.4 27.4 36 34 36C40.6 36 46 32.4 46 28M22 28V52C22 56.4 27.4 60 34 60C40.6 60 46 56.4 46 52V28M22 28C22 23.6 27.4 20 34 20C40.6 20 46 23.6 46 28" />
+      <path d="M46 38C46 42.4 51.4 46 58 46C64.6 46 70 42.4 70 38M46 38V62C46 66.4 51.4 70 58 70C64.6 70 70 66.4 70 62V38M46 38C46 33.6 51.4 30 58 30C64.6 30 70 33.6 70 38" />
     </svg>,
-    // Auto Revenue - gear icon
-    <svg key="revenue" viewBox="0 0 80 80" fill="none" className="w-16 h-16">
-      <path d="M40 25C31.7 25 25 31.7 25 40C25 48.3 31.7 55 40 55C48.3 55 55 48.3 55 40C55 31.7 48.3 25 40 25ZM40 48C36.1 48 33 44.9 33 41C33 37.1 36.1 34 40 34C43.9 34 47 37.1 47 41C47 44.9 43.9 48 40 48Z" fill="#14b2b2"/>
-      <path d="M67 36H62C61.3 33.3 60.1 30.8 58.5 28.6L62 25.1L56.9 20L53.4 23.5C51.2 21.9 48.7 20.7 46 20V15H38V20C35.3 20.7 32.8 21.9 30.6 23.5L27.1 20L22 25.1L25.5 28.6C23.9 30.8 22.7 33.3 22 36H17V44H22C22.7 46.7 23.9 49.2 25.5 51.4L22 54.9L27.1 60L30.6 56.5C32.8 58.1 35.3 59.3 38 60V65H46V60C48.7 59.3 51.2 58.1 53.4 56.5L56.9 60L62 54.9L58.5 51.4C60.1 49.2 61.3 46.7 62 44H67V36Z" fill="#14b2b2" fillOpacity="0.5"/>
+    
+    // 3. 수익 자동집계 (손바닥 위의 톱니바퀴)
+    <svg key="revenue" viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20">
+      <circle cx="40" cy="28" r="10" />
+      <path d="M40 14V18M40 38V42M26 28H30M50 28H54M30.1 18.1L32.9 20.9M47.1 35.1L49.9 37.9M26 38L31 34M54 18L49 22" />
+      <path d="M20 54C25 50 35 46 40 52C45 58 55 54 60 50M15 58C22 58 28 62 40 62C52 62 58 58 65 58" />
     </svg>,
+    
+    // 4. 항목별 분리 표시 (체크리스트와 펜)
+    <svg key="display" viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20">
+      <path d="M20 15H52V65H20V15Z" />
+      <path d="M28 27H32M28 39H32M28 51H32" />
+      <path d="M38 27H44M38 39H44M38 51H44" />
+      <path d="M48 45L62 25L66 29L52 49L48 45Z" />
+    </svg>,
+    
+    // 5. 정산 자동화 (강연/발표판 앞의 사람)
+    <svg key="automation" viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20">
+      <circle cx="30" cy="25" r="6" />
+      <path d="M20 48V37C20 34.8 30 34.8 30 37V48M25 48V60M30 48V60" />
+      <path d="M42 18H65V45H42V18Z" />
+      <path d="M53.5 45V62M45 62H62" />
+    </svg>,
+    
+    // 6. 프로모션 선정산 (리본이 달린 선물상자)
+    <svg key="promotion" viewBox="0 0 80 80" fill="none" stroke="#0fb4b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20">
+      <path d="M20 35H60V65H20V35Z" />
+      <path d="M16 25H64V35H16V25Z" />
+      <path d="M40 25V65" />
+      <path d="M40 25C40 18 32 15 32 20C32 25 40 25 40 25Z" />
+      <path d="M40 25C40 18 48 15 48 20C48 25 40 25 40 25Z" />
+    </svg>
   ];
 
   return (
-    <section className="relative w-full py-20 md:py-28 overflow-hidden">
-      {/* Background Image */}
+    <section className="relative w-full py-24 md:py-32 overflow-hidden bg-[#f3f4f6]">
+      {/* 어두운 자전거 라이더 배경을 유지하기 위한 오버레이 레이아웃 */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1571068316344-75bc76f77890?fm=jpg&q=80&w=2000&auto=format&fit=crop')`,
         }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+      {/* Content 영역 */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
+        
+        {/* 헤드라인 글자 크기 확대: text-4xl -> text-5xl */}
+        <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-20 tracking-tight">
+          씨업은 약속합니다.
+        </h2>
+
+        {/* 3열 종횡 배치 카드 그리드 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`bg-white p-8 md:p-10 flex flex-col items-center text-center ${service.borderColor}`}
+              {/* 이미지와 똑같은 대형 라운딩 카드 구성 + 마우스 호버 시 1.05배 확대 스케일 애니메이션 추가 */}
+              className="bg-white p-10 md:p-12 flex flex-col items-center text-center rounded-2xl shadow-xl border border-gray-100 transform hover:scale-105 transition-all duration-300 ease-out cursor-pointer"
             >
-              {/* Title */}
-              <h3 className="text-lg font-bold text-[#2c2e2f] mb-6">
+              {/* 타이틀 글자 크기 대폭 확대: text-lg -> text-2xl */}
+              <h3 className="text-2xl font-extrabold text-[#2c2e2f] mb-8 tracking-tight">
                 {service.title}
               </h3>
 
-              {/* Icon */}
-              <div className="w-20 h-20 mb-6 flex items-center justify-center">
+              {/* 정밀 매칭된 민트색 라인 일러스트 아이콘 크기 최적화 */}
+              <div className="w-24 h-24 mb-8 flex items-center justify-center transition-transform duration-300 hover:rotate-3">
                 {icons[index]}
               </div>
 
-              {/* Description */}
-              <p className="text-sm text-[#939c9d] leading-relaxed">
+              {/* 본문 설명글 크기 및 가독성 최적화: text-sm -> text-base */}
+              <p className="text-base md:text-lg text-[#555f61] font-medium leading-relaxed whitespace-pre-line max-w-[280px]">
                 {service.description}
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Pagination dots */}
-        <div className="flex justify-center mt-8 space-x-2">
-          <div className="w-2 h-2 rounded-full bg-white/50" />
-          <div className="w-2 h-2 rounded-full bg-white" />
         </div>
       </div>
     </section>

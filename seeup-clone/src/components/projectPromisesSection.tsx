@@ -23,7 +23,7 @@ export default function PromisesSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-[#f8f9fa]">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-[#2c2e2f] mb-16">
@@ -31,26 +31,24 @@ export default function PromisesSection() {
         </h2>
 
         {/* Promises Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {promises.map((promise) => (
             <div
               key={promise.number}
-              className="px-6 py-8 text-center"
+              className="bg-white px-8 py-12 text-center rounded-lg shadow-sm border border-gray-100 hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
             >
               {/* Number */}
-              <div className="inline-flex items-center justify-center w-12 h-12 border-2 border-[#2c2e2f] mb-6">
-                <span className="text-xl font-semibold text-[#2c2e2f]">
-                  {promise.number}
-                </span>
+              <div className="text-5xl md:text-6xl font-extrabold text-[#2c2e2f] mb-6">
+                {promise.number}
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold text-[#2c2e2f] mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-[#2c2e2f] mb-6 leading-snug">
                 {promise.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-[#939c9d] leading-relaxed">
+              <p className="text-base md:text-lg text-[#2c2e2f] leading-relaxed">
                 {promise.description}
               </p>
             </div>
