@@ -182,10 +182,11 @@ function FeaturesSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#3b3e3d] mb-2">
+          {/* text-3xl md:text-4xl -> text-4xl md:text-5xl 로 확대 */}
+          <h1 className="text-4xl md:text-5xl font-bold text-[#3b3e3d] mb-3 tracking-tight">
             배달 대행 수익,
           </h1>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#3b3e3d]">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#3b3e3d] tracking-tight">
             정확히 보이시나요?
           </h1>
         </div>
@@ -193,7 +194,10 @@ function FeaturesSection() {
         {/* Subtitle */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-8 flex-wrap">
-            <span className="text-2xl md:text-3xl font-bold text-[#0fb4b6]">씨업은 정확히 보입니다!</span>
+            {/* text-2xl md:text-3xl -> text-3xl md:text-4xl 로 확대 */}
+            <span className="text-3xl md:text-4xl font-extrabold text-[#0fb4b6] tracking-tight">
+              씨업은 정확히 보입니다!
+            </span>
           </div>
         </div>
 
@@ -261,44 +265,44 @@ function TestimonialsSection() {
       id="testimonials"
       className="relative py-24 bg-cover bg-center bg-no-repeat"
       style={{
-        // 사진 속 채소/식재료 봉투 느낌의 Unsplash 배경 이미지로 매칭했습니다.
-        backgroundImage: `url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80')`,
+        backgroundImage: `url('https://static.wixstatic.com/media/5aae48_75ca2c678ac3422eb4f7ff36bed04502~mv2.jpg/v1/fill/w_992,h_716,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5aae48_75ca2c678ac3422eb4f7ff36bed04502~mv2.jpg')`,
       }}
     >
       {/* 어두운 반투명 오버레이로 글씨 가독성 확보 */}
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        {/* Section Title */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-16 tracking-wide">
+        {/* 메인 타이틀 크기 확대: text-2xl md:text-3xl -> text-4xl md:text-5xl */}
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-20 tracking-tight">
           협력사들이 말하는 씨업 사용 후기
         </h2>
 
         {/* 3열 카드 그리드 레이아웃 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-12">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-md rounded-md border border-white/10 p-8 flex flex-col items-center justify-start min-h-[250px] text-center"
+              {/* 호버 효과 추가: hover:scale-105 transition-all duration-300 */}
+              className="bg-white/10 backdrop-blur-md rounded-md border border-white/10 p-8 flex flex-col items-center justify-start min-h-[280px] text-center transform hover:scale-105 hover:bg-white/15 hover:border-white/20 transition-all duration-300 ease-out cursor-pointer"
             >
-              {/* 카드 상단 협력사 이름 */}
-              <h3 className="text-white font-bold text-lg mb-6">
+              {/* 카드 상단 협력사 이름 크기 확대: text-l g -> text-2xl */}
+              <h3 className="text-white font-bold text-2xl mb-6 tracking-wide">
                 {testimonial.company}
               </h3>
               
-              {/* 후기 본문 (\n을 행바꿈으로 인식하도록 white-space-pre-line 적용) */}
-              <p className="text-white/90 text-sm md:text-base leading-relaxed whitespace-pre-line">
+              {/* 후기 본문 크기 확대: text-sm md:text-base -> text-base md:text-lg */}
+              <p className="text-white/95 text-base md:text-lg font-medium leading-relaxed whitespace-pre-line tracking-wide">
                 {testimonial.content}
               </p>
             </div>
           ))}
         </div>
 
-{/* 하단 협력사 문의하기 버튼 (정리된 최종본) */}
+        {/* 하단 협력사 문의하기 버튼 (글자 크기 및 사양을 상단 디자인에 맞춰 최적화) */}
         <div className="text-center mt-8">
           <a
             href="/contact"
-            className="inline-block bg-white/70 hover:bg-white text-[#333333] font-medium text-sm px-8 py-3 rounded shadow-md transition-all duration-200"
+            className="inline-block bg-white/70 hover:bg-white text-[#333333] font-semibold text-base px-10 py-3.5 rounded shadow-md transform hover:-translate-y-0.5 transition-all duration-200"
           >
             협력사 문의하기
           </a>
@@ -308,6 +312,7 @@ function TestimonialsSection() {
     </section>
   );
 }
+
 // CTA Section
 function CTASection() {
   return (
