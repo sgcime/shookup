@@ -86,19 +86,7 @@ function HeroSection() {
             </a>
             <a
               href="/contact"
-              onClick={() => {
-                // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
-                if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
-                  (window as any).trackNaverConversion("custom001");
-                }
-              }}
               className="inline-block bg-[#0fb4b6] text-white px-8 py-3 text-base font-medium hover:bg-[#0da0a2] transition-colors"
-              onClick={() => {
-                // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
-                if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
-                  (window as any).trackNaverConversion("custom002");
-                }
-              }}
             >
               협력사 문의하기
             </a>
