@@ -6,13 +6,11 @@ import Script from "next/script";
 export function ClientBody({ children }: { children: ReactNode }) {
   return (
     <body className="antialiased" suppressHydrationWarning>
-      {/* 1. 네이버 공통 log 외부 스크립트 로드 */}
       <Script 
         src="//wcs.naver.net/wcslog.js" 
         strategy="afterInteractive" 
       />
 
-      {/* 2. 발급 가이드 동기화 스크립트 (인증키 및 변수 매칭) */}
       <Script id="naver-wcslog-init" strategy="afterInteractive">
         {`
           if (!window.wcs_add) window.wcs_add = {};
@@ -24,6 +22,16 @@ export function ClientBody({ children }: { children: ReactNode }) {
             window.wcs.inflow();
             window.wcs_do();
           }
+
+          // 🛠️ 추가된 버튼 클릭 전환 추적 공통 함수
+          window.trackNaverConversion = function(customType) {
+            if (window.wcs) {
+              var _conv = {};
+              _conv.type = customType; // 'custom001' 또는 'custom002'가 들어옴
+              window.wcs.trans(_conv);
+              console.log("Naver conversion tracked:", customType);
+            }
+          };
         `}
       </Script>
 

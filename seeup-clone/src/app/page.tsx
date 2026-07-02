@@ -74,13 +74,31 @@ function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-end mt-8">
             <a
               href="https://pf.kakao.com/_YQXyn"
+              onClick={() => {
+                // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
+                if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
+                  (window as any).trackNaverConversion("custom001");
+                }
+              }}
               className="inline-block bg-white/20 backdrop-blur-sm text-white border border-white/50 px-8 py-3 text-base font-medium hover:bg-white/30 transition-colors"
             >
               카카오채널 문의하기
             </a>
             <a
               href="/contact"
+              onClick={() => {
+                // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
+                if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
+                  (window as any).trackNaverConversion("custom001");
+                }
+              }}
               className="inline-block bg-[#0fb4b6] text-white px-8 py-3 text-base font-medium hover:bg-[#0da0a2] transition-colors"
+              onClick={() => {
+                // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
+                if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
+                  (window as any).trackNaverConversion("custom002");
+                }
+              }}
             >
               협력사 문의하기
             </a>
@@ -318,6 +336,12 @@ function CTASection() {
             href="https://pf.kakao.com/_YQXyn"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
+              if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
+                (window as any).trackNaverConversion("custom001");
+              }
+            }}
             className="inline-flex items-center justify-center bg-[#3b3e3d] text-white px-8 py-3 text-base font-medium hover:bg-[#2a2d2c] transition-colors"
           >
             카톡 상담하기
@@ -325,6 +349,12 @@ function CTASection() {
           <a
             href="tel:82-02-858-5226"
             className="inline-flex items-center justify-center bg-[#8a8e8d] text-white px-8 py-3 text-base font-medium hover:bg-[#767a79] transition-colors"
+            onClick={() => {
+              // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
+              if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
+                (window as any).trackNaverConversion("custom003");
+              }
+            }}
           >
             전화 상담하기 (모바일 전용)
           </a>
