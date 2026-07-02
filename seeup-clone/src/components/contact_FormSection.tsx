@@ -7,6 +7,7 @@ declare global {
     Tally?: {
       loadEmbeds: () => void;
     };
+    trackNaverConversion?: (customType: string) => void; // 👈 린트 에러 방지를 위해 전역 타입 선언 추가
   }
 }
 
@@ -32,6 +33,24 @@ export default function FormSection() {
       }
     };
 
+    // 🎯 [네이버 광고 추적] Tally 설문 제출 완료 감지 리스너 추가
+    const handleTallySubmit = (event: MessageEvent) => {
+      try {
+        const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+        
+        // Tally에서 폼 제출 완료 신호(tally-form-submit)가 들어오면 실행
+        if (data && data.eventName === "tally-form-submit") {
+          if (typeof window !== "undefined" && window.trackNaverConversion) {
+            window.trackNaverConversion("custom002");
+          }
+        }
+      } catch (error) {
+        // JSON 파싱 실패 등 다른 message 이벤트는 안전하게 무시합니다.
+      }
+    };
+
+    window.addEventListener("message", handleTallySubmit);
+
     let script = document.querySelector(`script[src="${scriptSrc}"]`) as HTMLScriptElement;
 
     if (!script) {
@@ -49,7 +68,11 @@ export default function FormSection() {
       loadTally();
     }, 100);
 
-    return () => clearTimeout(timer);
+    // 🧼 컴포넌트가 사라질 때 타이머와 리스너를 깨끗이 정리(Clean-up)
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("message", handleTallySubmit);
+    };
   }, []);
 
   return (

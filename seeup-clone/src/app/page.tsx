@@ -75,9 +75,8 @@ function HeroSection() {
             <a
               href="https://pf.kakao.com/_YQXyn"
               onClick={() => {
-                // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
-                if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
-                  (window as any).trackNaverConversion("custom001");
+                if (typeof window !== "undefined" && "trackNaverConversion" in window) {
+                  (window.trackNaverConversion as (customType: string) => void)("custom001");
                 }
               }}
               className="inline-block bg-white/20 backdrop-blur-sm text-white border border-white/50 px-8 py-3 text-base font-medium hover:bg-white/30 transition-colors"
@@ -325,9 +324,8 @@ function CTASection() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
-              // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
-              if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
-                (window as any).trackNaverConversion("custom001");
+              if (typeof window !== "undefined" && "trackNaverConversion" in window) {
+                (window.trackNaverConversion as (customType: string) => void)("custom001");
               }
             }}
             className="inline-flex items-center justify-center bg-[#3b3e3d] text-white px-8 py-3 text-base font-medium hover:bg-[#2a2d2c] transition-colors"
@@ -338,9 +336,8 @@ function CTASection() {
             href="tel:82-02-858-5226"
             className="inline-flex items-center justify-center bg-[#8a8e8d] text-white px-8 py-3 text-base font-medium hover:bg-[#767a79] transition-colors"
             onClick={() => {
-              // 브라우저 환경(window)인지 확인하고 전역 추적 함수 실행
-              if (typeof window !== "undefined" && (window as any).trackNaverConversion) {
-                (window as any).trackNaverConversion("custom003");
+              if (typeof window !== "undefined" && "trackNaverConversion" in window) {
+                (window.trackNaverConversion as (customType: string) => void)("custom003");
               }
             }}
           >
